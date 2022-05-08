@@ -1,0 +1,122 @@
+SonodaMoeto@pc-132-197 Assignment4 % g++ -c CHART_hw_start.cpp -o CHART.o
+g++ -c CHART_hw_start.cpp -o CHART.o
+SonodaMoeto@pc-132-197 Assignment4 % g++ -c chart_tester.cpp
+g++ -c chart_tester.cpp
+SonodaMoeto@pc-132-197 Assignment4 % g++ chart_tester.o CHART.o rules.o -o chart_tester
+g++ chart_tester.o CHART.o rules.o -o chart_tester
+SonodaMoeto@pc-132-197 Assignment4 % ./chart_tester cgram.txt
+./chart_tester cgram.txt
+0:s --> np,vp
+1:np --> det,n
+2:det --> [the]
+3:n --> [man]
+4:n --> [dog]
+5:vp --> tv,np
+6:tv --> [hit]
+initial is s
+enter the string to be checked the man hit the dog
+the man hit the dog
+input is the man hit the dog
+length 1 ************************
+0:[the]
+0:det
+  1:[man]
+  1:n
+    2:[hit]
+    2:tv
+      3:[the]
+      3:det
+        4:[dog]
+        4:n
+length 2 ************************
+0:np
+
+
+      3:np
+length 3 ************************
+
+
+    2:vp
+length 4 ************************
+
+
+length 5 ************************
+0:s
+yep
+enter the string to be checked   C-c C-c^C
+SonodaMoeto@pc-132-197 Assignment4 % ./chart_tester hit_eats_will_gram.txt
+./chart_tester hit_eats_will_gram.txt
+0:s --> np,vp
+1:np --> det,n
+2:det --> [the]
+3:n --> [man]
+4:n --> [dog]
+5:n --> [will]
+6:aux --> [will]
+7:vp --> aux,vp
+8:vp --> tv,np
+9:tv --> [hit]
+10:tv --> [eats]
+11:vp --> [eats]
+initial is s
+enter the string to be checked the man eats the dog
+the man eats the dog
+input is the man eats the dog
+length 1 ************************
+0:[the]
+0:det
+  1:[man]
+  1:n
+    2:[eats]
+    2:tv
+    2:vp
+      3:[the]
+      3:det
+        4:[dog]
+        4:n
+length 2 ************************
+0:np
+
+
+      3:np
+length 3 ************************
+0:s
+
+    2:vp
+length 4 ************************
+
+
+length 5 ************************
+0:s
+yep
+enter the string to be checked the will hit the man
+the will hit the man
+input is the will hit the man
+length 1 ************************
+0:[the]
+0:det
+  1:[will]
+  1:n
+  1:aux
+    2:[hit]
+    2:tv
+      3:[the]
+      3:det
+        4:[man]
+        4:n
+length 2 ************************
+0:np
+
+
+      3:np
+length 3 ************************
+
+
+    2:vp
+length 4 ************************
+
+  1:vp
+length 5 ************************
+0:s
+yep
+enter the string to be checked 

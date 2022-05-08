@@ -1,0 +1,10 @@
+initial(vp)
+vp --> L,R
+L --> va,np
+R --> tt,vp
+vp --> vb,np
+va --> [order]
+vb --> [find]
+np --> [it]
+np --> [him]
+tt --> [to]
